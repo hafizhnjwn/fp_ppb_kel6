@@ -3,6 +3,7 @@ import 'package:fp_pbb_kel6/screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fp_pbb_kel6/screens/user_page.dart';
+import 'package:fp_pbb_kel6/screens/create_post.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -23,7 +24,7 @@ class _NavigationPageState extends State<NavigationPage> {
           final List<Widget> pages = [
             HomePage(userSnaphot: snapshot),
             Center(child: Text("Placeholder")), // Explore Page
-            Center(child: Text("Placeholder")), // Create Page
+            const CreatePostScreen(), // Create Page
             UserPage(userSnaphot: snapshot),
           ];
           return Scaffold(
